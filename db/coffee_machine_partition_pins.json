@@ -1,0 +1,45 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "todisplay[0]",
+					"strict" : false
+				},
+				{
+					"name" : "todisplay[1]",
+					"strict" : false
+				},
+				{
+					"name" : "todisplay[2]",
+					"strict" : false
+				},
+				{
+					"name" : "todisplay[3]",
+					"strict" : false
+				},
+				{
+					"name" : "todisplay[6]",
+					"strict" : false
+				},
+				{
+					"name" : "binInput[0]",
+					"strict" : false
+				},
+				{
+					"name" : "binInput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "binInput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "binInput[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
