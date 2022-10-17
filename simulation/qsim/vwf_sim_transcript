@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off coffee_machine -c coffee_machine --vector_source="C:/Users/jrpfa/Desktop/coffee_machine/Waveform.vwf" --testbench_file="C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off coffee_machine -c coffee_machine --vector_source="C:/Users/jrpfa/Desktop/coffee_machine/drinksMenuFSM.vwf" --testbench_file="C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim/drinksMenuFSM.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,10 +25,17 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Mon May 31 14:43:25 2021
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off coffee_machine -c coffee_machine --vector_source=C:/Users/jrpfa/Desktop/coffee_machine/Waveform.vwf --testbench_file=C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim/Waveform.vwf.vht
+    Info: Processing started: Sat Jun 19 12:11:41 2021
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off coffee_machine -c coffee_machine --vector_source=C:/Users/jrpfa/Desktop/coffee_machine/drinksMenuFSM.vwf --testbench_file=C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim/drinksMenuFSM.vwf.vht
 Info (119006): Selected device EP4CE115F29C7 for design "coffee_machine"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+VHDL Test Bench File C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim/drinksMenuFSM.vwf.vht for simulation
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 24 warnings
+    Info: Peak virtual memory: 4638 megabytes
+    Info: Processing ended: Sat Jun 19 12:11:42 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
@@ -52,14 +59,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Mon May 31 14:43:26 2021
+    Info: Processing started: Sat Jun 19 12:11:42 2021
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim/ coffee_machine -c coffee_machine
 Info (119006): Selected device EP4CE115F29C7 for design "coffee_machine"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file coffee_machine.vho in folder "C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4640 megabytes
-    Info: Processing ended: Mon May 31 14:43:27 2021
+    Info: Peak virtual memory: 4643 megabytes
+    Info: Processing ended: Sat Jun 19 12:11:43 2021
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -83,62 +90,69 @@ Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
 # do coffee_machine.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:43:27 on May 31,2021
+# Start time: 12:11:44 on Jun 19,2021
 # vcom -work work coffee_machine.vho 
 # -- Loading package STANDARD
-
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
 # -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
 # -- Loading package cycloneive_atom_pack
 # -- Loading package cycloneive_components
-# -- Compiling entity Bin7Seg
-# -- Compiling architecture structure of Bin7Seg
-# End time: 14:43:27 on May 31,2021, Elapsed time: 0:00:00
+# -- Compiling entity drinksMenuFSM
+# -- Compiling architecture structure of drinksMenuFSM
+
+# End time: 12:11:44 on Jun 19,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:43:27 on May 31,2021
-# vcom -work work Waveform.vwf.vht 
+# Start time: 12:11:44 on Jun 19,2021
+# vcom -work work drinksMenuFSM.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity Bin7Seg_vhd_vec_tst
-# -- Compiling architecture Bin7Seg_arch of Bin7Seg_vhd_vec_tst
-# End time: 14:43:27 on May 31,2021, Elapsed time: 0:00:00
+# -- Compiling entity drinksMenuFSM_vhd_vec_tst
+# -- Compiling architecture drinksMenuFSM_arch of drinksMenuFSM_vhd_vec_tst
+# End time: 12:11:44 on Jun 19,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Bin7Seg_vhd_vec_tst 
-# Start time: 14:43:27 on May 31,2021
+# vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.drinksMenuFSM_vhd_vec_tst 
+# Start time: 12:11:44 on Jun 19,2021
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.bin7seg_vhd_vec_tst(bin7seg_arch)
+# Loading work.drinksmenufsm_vhd_vec_tst(drinksmenufsm_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.bin7seg(structure)
+# Loading work.drinksmenufsm(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneive.cycloneive_io_obuf(arch)
 # Loading cycloneive.cycloneive_io_ibuf(arch)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
-# after#31
+# Loading altera.dffeas(vital_dffeas)
+# ** Warning: Design size of 11787 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# after#33
 
-# End time: 14:43:28 on May 31,2021, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# End time: 12:11:45 on Jun 19,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/jrpfa/Desktop/coffee_machine/Waveform.vwf...
+Reading C:/Users/jrpfa/Desktop/coffee_machine/drinksMenuFSM.vwf...
 
 Reading C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim/coffee_machine.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim/coffee_machine_20210531144328.sim.vwf
+Writing the resulting VWF to C:/Users/jrpfa/Desktop/coffee_machine/simulation/qsim/coffee_machine_20210619121145.sim.vwf
 
 Finished VCD to VWF conversion.
 

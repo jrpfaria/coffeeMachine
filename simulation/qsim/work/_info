@@ -79,7 +79,7 @@ R16
 Abin7seg_arch
 R5
 R6
-Z22 DEx4 work 19 bin7seg_vhd_vec_tst 0 22 9DlBX];n=IcHE;B7g83;R0
+DEx4 work 19 bin7seg_vhd_vec_tst 0 22 9DlBX];n=IcHE;B7g83;R0
 l44
 L33
 Vk;7Ka@lgh_f6RXTW`8e^01
@@ -91,6 +91,186 @@ R11
 R12
 R20
 R21
+!i113 1
+R15
+R16
+Edrinksmenufsm
+Z22 w1624101103
+R3
+R7
+R2
+Z23 DPx6 altera 11 dffeas_pack 0 22 ?bDUB9Db2N8iCCALNL;CT3
+R4
+R5
+R6
+Z24 DPx6 altera 28 altera_primitives_components 0 22 c]VUMXSEi8Z`KM1bem<:B3
+R0
+R8
+R9
+l0
+L36
+VPYoa>HPiSBHDYI;J@J10^3
+!s100 D@m<223z`jEYTocg>9:;L2
+R10
+32
+Z25 !s110 1624101104
+!i10b 1
+Z26 !s108 1624101104.000000
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R23
+R4
+R5
+R6
+R24
+DEx4 work 13 drinksmenufsm 0 22 PYoa>HPiSBHDYI;J@J10^3
+l186
+L58
+VMC`ROk_ULFLm>Q`db2jdS1
+!s100 VCZ]SdGikzW6]?DKSNcjX3
+R10
+32
+R25
+!i10b 1
+R26
+R13
+R14
+!i113 1
+R15
+R16
+Edrinksmenufsm_vhd_vec_tst
+Z27 w1624101102
+R5
+R6
+R0
+Z28 8drinksMenuFSM.vwf.vht
+Z29 FdrinksMenuFSM.vwf.vht
+l0
+L31
+VmPZZk^;^e_SS[VG^D]Cz60
+!s100 bi;3SQ5o31Ii2?4k>lFNc1
+R10
+32
+R25
+!i10b 1
+R26
+Z30 !s90 -work|work|drinksMenuFSM.vwf.vht|
+Z31 !s107 drinksMenuFSM.vwf.vht|
+!i113 1
+R15
+R16
+Adrinksmenufsm_arch
+R5
+R6
+Z32 DEx4 work 25 drinksmenufsm_vhd_vec_tst 0 22 mPZZk^;^e_SS[VG^D]Cz60
+l74
+L33
+VjdVL2gmai0?;TP?KeQ_Bi1
+!s100 UZUW?CdJN0AU1hOF9F<M`0
+R10
+32
+R25
+!i10b 1
+R26
+R30
+R31
+!i113 1
+R15
+R16
+Esugarlevelfsm
+Z33 w1624100541
+R3
+R7
+R2
+R23
+R4
+R5
+R6
+R24
+R0
+R8
+R9
+l0
+L36
+VabzA62I5ZzajSc]IWX9PC2
+!s100 <H?Tk[1D[GjKn=[Cb5LH:1
+R10
+32
+Z34 !s110 1624100542
+!i10b 1
+Z35 !s108 1624100542.000000
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R23
+R4
+R5
+R6
+R24
+DEx4 work 13 sugarlevelfsm 0 22 abzA62I5ZzajSc]IWX9PC2
+l123
+L50
+VCh5bIR8:>Mfo8dafzDi:h3
+!s100 GSoOd4K<1_YbhW9?DUgCg1
+R10
+32
+R34
+!i10b 1
+R35
+R13
+R14
+!i113 1
+R15
+R16
+Esugarlevelfsm_vhd_vec_tst
+Z36 w1624100540
+R5
+R6
+R0
+Z37 8SugarFSM.vwf.vht
+Z38 FSugarFSM.vwf.vht
+l0
+L31
+VS25[Y9Sn_QLdgSHA=QTXM2
+!s100 dNm]4of39f:Y]JQHUYjB01
+R10
+32
+R34
+!i10b 1
+R35
+Z39 !s90 -work|work|SugarFSM.vwf.vht|
+Z40 !s107 SugarFSM.vwf.vht|
+!i113 1
+R15
+R16
+Asugarlevelfsm_arch
+R5
+R6
+DEx4 work 25 sugarlevelfsm_vhd_vec_tst 0 22 S25[Y9Sn_QLdgSHA=QTXM2
+l58
+L33
+VP22UV^M]m<NeCgCYej;7h1
+!s100 I2M3MW9BS@N8zbC>0o0U<3
+R10
+32
+R34
+!i10b 1
+R35
+R39
+R40
 !i113 1
 R15
 R16

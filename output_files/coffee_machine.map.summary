@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Mon May 31 14:41:05 2021
+Analysis & Synthesis Status : Successful - Sat Jun 26 17:47:04 2021
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : coffee_machine
-Top-level Entity Name : Bin7Seg
+Top-level Entity Name : DrinksControlUnitDemo
 Family : Cyclone IV E
-Total logic elements : 5
-    Total combinational functions : 5
-    Dedicated logic registers : 0
-Total registers : 0
-Total pins : 11
+Total logic elements : 588
+    Total combinational functions : 581
+    Dedicated logic registers : 253
+Total registers : 253
+Total pins : 105
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

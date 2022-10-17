@@ -1,0 +1,42 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity drinksMenuFSM is
+	port(amount: out std_logic_vector(7 downto 0);
+		  drink: out std_logic);
+end drinksMenuFSM;
+
+architecture v1 of drinksMenuFSM is
+
+		type TState is (Coffee, Tea, HotChoc);
+		signal cs, ns : TState;
+			
+begin 
+
+		process(cs)
+		begin 
+			drink <= '0';
+			ns <= cs;
+			
+			case cs is 
+				when Coffee =>
+					if (KEY(0)) then
+						ns <= E1;
+					end if;	
+				
+				when Tea =>
+					if (KEY(0)) then
+						ns <= HotChoc;
+					elsif (KEY(1)) then
+						ns <= Coffee;
+					end if;
+				
+				when HotChoc =>
+					if (KEY(1)) then
+						ns <= Tea;
+					end if;
+
+			end case;
+		end process;
+	end v1;

@@ -1,0 +1,15 @@
+
+State Machine - |DrinksControlUnitDemo|sugarLevelFSM:sugarFSM|state
+Name state.E3 state.E2 state.E1 state.E0 
+state.E0 0 0 0 0 
+state.E1 0 0 1 1 
+state.E2 0 1 0 1 
+state.E3 1 0 0 1 
+
+State Machine - |DrinksControlUnitDemo|drinksMenuFSM:drinksFSM|state
+Name state.HotChoc state.Tea state.Coffee state.Choice state.Hello 
+state.Hello 0 0 0 0 0 
+state.Choice 0 0 0 1 1 
+state.Coffee 0 0 1 0 1 
+state.Tea 0 1 0 0 1 
+state.HotChoc 1 0 0 0 1 

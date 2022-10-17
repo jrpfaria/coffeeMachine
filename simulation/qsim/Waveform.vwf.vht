@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "05/31/2021 14:43:26"
+-- Generated on "06/19/2021 11:54:42"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          Bin7Seg
+-- Vhdl Test Bench(with test vectors) for design  :          drinksMenuFSM
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,68 +28,188 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY Bin7Seg_vhd_vec_tst IS
-END Bin7Seg_vhd_vec_tst;
-ARCHITECTURE Bin7Seg_arch OF Bin7Seg_vhd_vec_tst IS
+ENTITY drinksMenuFSM_vhd_vec_tst IS
+END drinksMenuFSM_vhd_vec_tst;
+ARCHITECTURE drinksMenuFSM_arch OF drinksMenuFSM_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL binInput : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL todisplay : STD_LOGIC_VECTOR(6 DOWNTO 0);
-COMPONENT Bin7Seg
+SIGNAL clear : STD_LOGIC;
+SIGNAL clk : STD_LOGIC;
+SIGNAL done : STD_LOGIC;
+SIGNAL drink : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL fix : STD_LOGIC;
+SIGNAL mode : STD_LOGIC;
+SIGNAL preparing : STD_LOGIC;
+SIGNAL ready : STD_LOGIC;
+SIGNAL refresh : STD_LOGIC;
+SIGNAL reset : STD_LOGIC;
+SIGNAL static : STD_LOGIC;
+SIGNAL sugaren : STD_LOGIC;
+SIGNAL ticks : STD_LOGIC;
+SIGNAL xIn0 : STD_LOGIC;
+SIGNAL xIn1 : STD_LOGIC;
+SIGNAL xIn2 : STD_LOGIC;
+SIGNAL xIn3 : STD_LOGIC;
+COMPONENT drinksMenuFSM
 	PORT (
-	binInput : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	todisplay : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+	clear : OUT STD_LOGIC;
+	clk : IN STD_LOGIC;
+	done : IN STD_LOGIC;
+	drink : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	fix : OUT STD_LOGIC;
+	mode : OUT STD_LOGIC;
+	preparing : OUT STD_LOGIC;
+	ready : IN STD_LOGIC;
+	refresh : IN STD_LOGIC;
+	reset : IN STD_LOGIC;
+	static : OUT STD_LOGIC;
+	sugaren : OUT STD_LOGIC;
+	ticks : IN STD_LOGIC;
+	xIn0 : IN STD_LOGIC;
+	xIn1 : IN STD_LOGIC;
+	xIn2 : IN STD_LOGIC;
+	xIn3 : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : Bin7Seg
+	i1 : drinksMenuFSM
 	PORT MAP (
 -- list connections between master ports and signals
-	binInput => binInput,
-	todisplay => todisplay
+	clear => clear,
+	clk => clk,
+	done => done,
+	drink => drink,
+	fix => fix,
+	mode => mode,
+	preparing => preparing,
+	ready => ready,
+	refresh => refresh,
+	reset => reset,
+	static => static,
+	sugaren => sugaren,
+	ticks => ticks,
+	xIn0 => xIn0,
+	xIn1 => xIn1,
+	xIn2 => xIn2,
+	xIn3 => xIn3
 	);
--- binInput[3]
-t_prcs_binInput_3: PROCESS
+
+-- clk
+t_prcs_clk: PROCESS
 BEGIN
-	binInput(3) <= '1';
-	WAIT FOR 160000 ps;
-	binInput(3) <= '0';
+	FOR i IN 1 TO 16
+	LOOP
+		clk <= '0';
+		WAIT FOR 30000 ps;
+		clk <= '1';
+		WAIT FOR 30000 ps;
+	END LOOP;
+	clk <= '0';
+	WAIT FOR 30000 ps;
+	clk <= '1';
 WAIT;
-END PROCESS t_prcs_binInput_3;
--- binInput[2]
-t_prcs_binInput_2: PROCESS
+END PROCESS t_prcs_clk;
+
+-- done
+t_prcs_done: PROCESS
 BEGIN
-	binInput(2) <= '1';
-	WAIT FOR 160000 ps;
-	binInput(2) <= '0';
-	WAIT FOR 160000 ps;
-	binInput(2) <= '1';
-	WAIT FOR 160000 ps;
-	binInput(2) <= '0';
-	WAIT FOR 160000 ps;
-	binInput(2) <= '1';
-	WAIT FOR 160000 ps;
-	binInput(2) <= '0';
-	WAIT FOR 160000 ps;
-	binInput(2) <= '1';
+	done <= '0';
 WAIT;
-END PROCESS t_prcs_binInput_2;
--- binInput[1]
-t_prcs_binInput_1: PROCESS
+END PROCESS t_prcs_done;
+
+-- ready
+t_prcs_ready: PROCESS
 BEGIN
-	binInput(1) <= '0';
-	WAIT FOR 640000 ps;
-	binInput(1) <= '1';
-	WAIT FOR 320000 ps;
-	binInput(1) <= '0';
+	ready <= '0';
+	WAIT FOR 20000 ps;
+	ready <= '1';
+	WAIT FOR 20000 ps;
+	ready <= '0';
+	WAIT FOR 760000 ps;
+	ready <= '1';
+	WAIT FOR 20000 ps;
+	ready <= '0';
 WAIT;
-END PROCESS t_prcs_binInput_1;
--- binInput[0]
-t_prcs_binInput_0: PROCESS
+END PROCESS t_prcs_ready;
+
+-- refresh
+t_prcs_refresh: PROCESS
 BEGIN
-	binInput(0) <= '0';
-	WAIT FOR 320000 ps;
-	binInput(0) <= '1';
+	refresh <= '0';
+	WAIT FOR 500000 ps;
+	refresh <= '1';
+	WAIT FOR 20000 ps;
+	refresh <= '0';
 WAIT;
-END PROCESS t_prcs_binInput_0;
-END Bin7Seg_arch;
+END PROCESS t_prcs_refresh;
+
+-- reset
+t_prcs_reset: PROCESS
+BEGIN
+	reset <= '0';
+	WAIT FOR 620000 ps;
+	reset <= '1';
+	WAIT FOR 20000 ps;
+	reset <= '0';
+WAIT;
+END PROCESS t_prcs_reset;
+
+-- ticks
+t_prcs_ticks: PROCESS
+BEGIN
+	ticks <= '0';
+WAIT;
+END PROCESS t_prcs_ticks;
+
+-- xIn3
+t_prcs_xIn3: PROCESS
+BEGIN
+	xIn3 <= '0';
+	WAIT FOR 200000 ps;
+	xIn3 <= '1';
+	WAIT FOR 30000 ps;
+	xIn3 <= '0';
+	WAIT FOR 90000 ps;
+	xIn3 <= '1';
+	WAIT FOR 20000 ps;
+	xIn3 <= '0';
+WAIT;
+END PROCESS t_prcs_xIn3;
+
+-- xIn0
+t_prcs_xIn0: PROCESS
+BEGIN
+	xIn0 <= '0';
+	WAIT FOR 80000 ps;
+	xIn0 <= '1';
+	WAIT FOR 30000 ps;
+	xIn0 <= '0';
+	WAIT FOR 20000 ps;
+	xIn0 <= '1';
+	WAIT FOR 40000 ps;
+	xIn0 <= '0';
+WAIT;
+END PROCESS t_prcs_xIn0;
+
+-- xIn1
+t_prcs_xIn1: PROCESS
+BEGIN
+	xIn1 <= '0';
+	WAIT FOR 260000 ps;
+	xIn1 <= '1';
+	WAIT FOR 20000 ps;
+	xIn1 <= '0';
+WAIT;
+END PROCESS t_prcs_xIn1;
+
+-- xIn2
+t_prcs_xIn2: PROCESS
+BEGIN
+	xIn2 <= '0';
+	WAIT FOR 380000 ps;
+	xIn2 <= '1';
+	WAIT FOR 20000 ps;
+	xIn2 <= '0';
+WAIT;
+END PROCESS t_prcs_xIn2;
+END drinksMenuFSM_arch;
